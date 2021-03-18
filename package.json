@@ -1,0 +1,26 @@
+{
+  "name": "first-email",
+  "version": "1.0.0",
+  "description": "send first email using sendgrid, wow",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rudolphh/sendgrid-api.git"
+  },
+  "keywords": [
+    "sendgrid",
+    "node"
+  ],
+  "author": "Rudy A Hernandez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rudolphh/sendgrid-api/issues"
+  },
+  "homepage": "https://github.com/rudolphh/sendgrid-api#readme",
+  "dependencies": {
+    "@sendgrid/mail": "^7.4.2"
+  }
+}

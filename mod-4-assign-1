@@ -1,0 +1,26 @@
+
+db.movies.insert(
+    [
+        { _id: 1, name: "batman", genre: "action", rating: 7, language: "english" },
+        { _id: 2, name: "superman", genre: "action", rating: 8, language: "english" },
+        { _id: 3, name: "pride and prejudice", genre: "romance", rating: 8, language: "english" },
+        { _id: 4, name: "Life is beautiful", genre: "drama", rating: 9, language: "italian" },
+        { _id: 5, name: "parasite", genre: "thriller", rating: 6, language: "chinese" },
+    ]
+)
+
+db.movies.find()
+
+db.movies.findOne({ _id: 3 })
+
+db.movies.find().sort({ rating: -1 }).limit(3)
+
+db.movies.update({ name: "batman" }, { $set: { achievements: "Super hit" } })
+let movie = db.movies.findOne({ _id: 4 })
+movie.achievements = "Super Duper Hit"
+db.movies.save(movie)
+
+db.movies.find({ $or : [ { achievements: "Super hit" }, { achievements: "Super Duper Hit" } ] })
+
+db.movies.find( { achievements: { $exists: true } })
+
